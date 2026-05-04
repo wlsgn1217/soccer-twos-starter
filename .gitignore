@@ -2,6 +2,11 @@ envs/
 ray_results/
 ceia_baseline_agent/
 data/
+dagger_artifacts*/
+dagger_student_run*/
+dagger_privileged_agent/
+privileged_student_agent/
+JH_0_AGENT/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

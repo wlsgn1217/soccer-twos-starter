@@ -12,6 +12,27 @@ tasks:
           position:
             x: [7, 11]
             y: [-5, 5]
+        1:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        2:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        3:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
   - name: "Easy Goal"
     config_fn: none
     ranges:
@@ -28,6 +49,27 @@ tasks:
           position:
             x: [7, 14]
             y: [-5, 5]
+        1:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        2:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        3:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
   - name: "Medium Goal"
     config_fn: none
     ranges:
@@ -44,6 +86,27 @@ tasks:
           position:
             x: [-7, 14]
             y: [-5, 5]
+        1:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        2:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        3:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
   - name: "Hard Goal"
     config_fn: none
     ranges:
@@ -60,6 +123,27 @@ tasks:
           position:
             x: [-14, 14]
             y: [-5, 5]
+        1:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        2:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
+        3:
+          rotation_y: [0, 360]
+          position:
+            x: [-14, 14]
+            y:
+              - [-5.0, -4.5]
+              - [4.5, 5.0]
   - name: "Random Players"
     config_fn: random_players
     ranges:

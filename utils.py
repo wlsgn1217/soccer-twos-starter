@@ -1,8 +1,16 @@
-from random import uniform as randfloat
-
 import gym
 from ray.rllib import MultiAgentEnv
 import soccer_twos
+
+from curriculum_sampling import (  # noqa: F401 re-export for callers
+    BOT_MIN_DIST_FROM_BALL,
+    dist_sq_xy,
+    sample_player,
+    sample_players_states,
+    sample_pos_vel,
+    sample_val,
+    sample_vec,
+)
 
 
 class RLLibWrapper(gym.core.Wrapper, MultiAgentEnv):
@@ -33,30 +41,3 @@ def create_rllib_env(env_config: dict = {}):
         # is multiagent by default, is only disabled if explicitly set to False
         return env
     return RLLibWrapper(env)
-
-
-def sample_vec(range_dict):
-    return [
-        randfloat(range_dict["x"][0], range_dict["x"][1]),
-        randfloat(range_dict["y"][0], range_dict["y"][1]),
-    ]
-
-
-def sample_val(range_tpl):
-    return randfloat(range_tpl[0], range_tpl[1])
-
-
-def sample_pos_vel(range_dict):
-    _s = {}
-    if "position" in range_dict:
-        _s["position"] = sample_vec(range_dict["position"])
-    if "velocity" in range_dict:
-        _s["velocity"] = sample_vec(range_dict["velocity"])
-    return _s
-
-
-def sample_player(range_dict):
-    _s = sample_pos_vel(range_dict)
-    if "rotation_y" in range_dict:
-        _s["rotation_y"] = sample_val(range_dict["rotation_y"])
-    return _s

@@ -1,0 +1,203 @@
+moving_average:
+  window: 5
+  threshold: 0.4
+
+stages:
+  - name: easy_90_default_10
+    mixture:
+      easy_attack: 0.9
+      default: 0.1
+
+  - name: easy_80_medium_10_default_10
+    mixture:
+      easy_attack: 0.8
+      medium_attack: 0.1
+      default: 0.1
+
+  - name: easy_70_medium_20_default_10
+    mixture:
+      easy_attack: 0.7
+      medium_attack: 0.2
+      default: 0.1
+
+  - name: easy_60_medium_30_default_10
+    mixture:
+      easy_attack: 0.6
+      medium_attack: 0.3
+      default: 0.1
+
+  - name: easy_50_medium_40_default_10
+    mixture:
+      easy_attack: 0.5
+      medium_attack: 0.4
+      default: 0.1
+
+  - name: easy_40_medium_50_default_10
+    mixture:
+      easy_attack: 0.4
+      medium_attack: 0.5
+      default: 0.1
+
+  - name: easy_30_medium_50_default_20
+    mixture:
+      easy_attack: 0.3
+      medium_attack: 0.5
+      default: 0.2
+
+  - name: easy_20_medium_40_default_40
+    mixture:
+      easy_attack: 0.2
+      medium_attack: 0.4
+      default: 0.4
+
+  - name: easy_10_medium_30_default_60
+    mixture:
+      easy_attack: 0.1
+      medium_attack: 0.3
+      default: 0.6
+
+  - name: medium_20_default_80
+    mixture:
+      medium_attack: 0.2
+      default: 0.8
+
+  - name: medium_10_default_70_random_20
+    mixture:
+      medium_attack: 0.1
+      default: 0.7
+      random_full: 0.2
+
+  - name: default_70_random_30
+    mixture:
+      default: 0.7
+      random_full: 0.3
+
+scenarios:
+  easy_attack:
+    ball:
+      position:
+        x: [9.0, 13.0]
+        y: [-4.5, 4.5]
+      velocity:
+        x: [0.0, 0.0]
+        y: [0.0, 0.0]
+    train_players:
+      0:
+        position:
+          x: [7.0, 13.0]
+          y: [-4.5, 4.5]
+        velocity:
+          x: [-1.0, 1.0]
+          y: [-1.0, 1.0]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [7.0, 13.0]
+          y: [-4.5, 4.5]
+        velocity:
+          x: [-1.0, 1.0]
+          y: [-1.0, 1.0]
+        rotation_y: [0.0, 360.0]
+    opponent_players:
+      0:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+
+  medium_attack:
+    ball:
+      position:
+        x: [7.0, 14.0]
+        y: [-4.5, 4.5]
+      velocity:
+        x: [-2.0, 3.0]
+        y: [-3.0, 3.0]
+    train_players:
+      0:
+        position:
+          x: [0.0, 13.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [0.0, 13.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+    opponent_players:
+      0:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+
+  random_full:
+    ball:
+      position:
+        x: [-8.0, 8.0]
+        y: [-4.5, 4.5]
+      velocity:
+        x: [-2.0, 2.0]
+        y: [-2.0, 2.0]
+    train_players:
+      0:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+    opponent_players:
+      0:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
+      1:
+        position:
+          x: [-14.0, 14.0]
+          y: [-5.0, 5.0]
+        velocity:
+          x: [-1.5, 1.5]
+          y: [-1.5, 1.5]
+        rotation_y: [0.0, 360.0]
